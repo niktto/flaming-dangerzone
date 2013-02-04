@@ -127,6 +127,8 @@ def add_cwd_segment(powerline, cwd, maxdepth, cwd_only=False):
         cwd = cwd[1:]
 
     names = cwd.split('/')
+    # Shortening folder names
+    names = ['{0}...'.format(n[:4]) if len(n) >= 8 else n for n in names]
     if len(names) > maxdepth:
         names = names[:2] + [u'\u2026'] + names[2 - maxdepth:]
 
