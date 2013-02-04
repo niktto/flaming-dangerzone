@@ -103,10 +103,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-
-# mint-fortune
-/usr/bin/mint-fortune
-
 function _update_ps1() {
    export PS1="$(~/.config/settings/powerline-shell.py $?)"
 }
